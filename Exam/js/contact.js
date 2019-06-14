@@ -1,7 +1,10 @@
-//Contact form validation
+var confirm = false;
+
 function validateForm() {
 	//variables
-	var firstName = document.getElementById("yourName").value;
+	var success = true;
+
+	var firstNameElement = document.getElementById("yourName").value;
 	var email = document.getElementById("email").value;
 	var message = document.getElementById("message").value;
 
@@ -13,35 +16,42 @@ function validateForm() {
 	var emailRGEX = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
 
 	//validation of the form
-	if(fullName == "") {
+	if(firstName == "") {
 		nameError.style.display = "block";
+		success = false;
 	} else {
 		nameError.style.display = "none";
 	}
 
 	if(emailRGEX.test(email) == false) {
 		emailError.style.display = "block";
+		success = false;
 	} else {
 		emailError.style.display = "none";
 	}
 
 	if(comment.length>250) {
 		commentError.style.display = "block";
+		success = false;
 	} else {
 		commentError.style.display = "none";
 	}
+
+	confirm = success;
 }
-validateForm();
+//validateForm();
 
 function submitMessage() {
-	if (confirm("The contact form is filled out correctly. Do you want to submit?")) {
+	validateForm();
+	if (confirm) {
+		alert("The contact form is filled out correctly. Do you want to submit?");
 		txt = "Question sent";
 	} else {
 		txt = "You pressed cancel - question not sent"
 	}
 	document.getElementById("confTxt").innerHTML = txt;
 }
-submitMessage();
+//submitMessage();
 
 document.getElementById("messageSend").addEventListener("click", function(){
 	validateForm();

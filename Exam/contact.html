@@ -6,7 +6,6 @@
     <meta name="description" content="SpaceX">
     <meta name="description" content="SpaceX rocket design.">
     <script src="js/script.js"></script>
-    <script src="js/contact.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -21,32 +20,52 @@
           </div>
         </div>
         <nav id="menu">
+          <a class="index" href="mission.html">MISSION</a>
           <a class="index" href="falcon.html">FALCON 9</a>
-          <a class="index" href="falconH.html">FALCON HEAVY</a>
-          <a class="index" href="contact.html">CONTACT</a>
+          <a class="highlight index" href="contact.html">CONTACT</a>
         </nav>
         <nav>
           <div class="dropdown">
             <button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
             <div id="myDropdown" class="dropdown-content">
+              <a class="index" href="mission.html">MISSION</a>
               <a class="index" href="falcon.html">FALCON 9</a>
-              <a class="index" href="falconH.html">FALCON HEAVY</a>
-              <a class="index" href="contact.html">CONTACT</a>
+              <a class="highlight index" href="contact.html">CONTACT</a>
             </div>
           </div>
         </nav>
       </div>
     </header>
     <main>
-      <div class="indexpic4"></div>
-        <form class="contactForm">
-          <div class="row">
-            <div class="col">
-              <h1>Contact<h1>
+      <div class="indexpic4">
+        <div class="countdown">
+          <div class="countdownClass float-left">
+            <h1 id="daysInput">00</h1>
+            <h1>d</h1>
+          </div>
+          <div class="countdownClass float-center">
+            <h1 id="hoursInput">00</h1>
+            <h1>h</h1>
+          </div>
+          <div class="countdownClass float-center">
+            <h1 id="minutesInput">00</h1>
+            <h1>m</h1>
+          </div>
+          <div class="countdownClass float-right">
+            <h1 id="secondsInput">00</h1>
+            <h1>s</h1>
+          </div>
+        </div>
+        <a href="mission.html"> <h2 class="cta">STAY SMART - Stay Tuned on Falcon 9 next take off</h2></a>
+      </div>
+          <div class="container1">
+            <div class="content">
+              <h1>CONTACT<h1>
             </div>
+            <form class="contactForm">
             <div class="colCon">
               <p>Your Name:</p>
-              <input type="text" name="firstName" id="yourName" placeholder="Your Name">
+              <input type="text" name="firstName" id="yourName" placeholder="Your Name">Test</input>
               <span id="nameError">This field can not be blank</span>
             </div>
             <div class="colCon">
@@ -60,12 +79,12 @@
               <span id="commentError">Maximum 250 words</span>
             </div>
             <div class="colCon">
-                <button onclick="submitMessage()" id="messageSend" class="m-t-30">Submit<i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                <button onclick="submitMessage()" id="messageSend" class="m-t-30">Submit</button>
                 <p id="confTxt"></p>
             </div>
+          </form>
           </div>
-      </form>
-      https://goo.gl/maps/6YXUzmWTSqsbAz1ZA
+
     </main>
     <footer>
       <div id="icons">
@@ -75,5 +94,6 @@
         <a href="https://twitter.com/spacex"><i class="fab fa-twitter"></i></a>
       </div>
     </footer>
+    <script src="js/contact.js"></script>
   </body>
 </html>

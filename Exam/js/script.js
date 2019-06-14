@@ -61,6 +61,3 @@ Menu dropdown showing, when the user clicks on the button, toggle between hiding
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
-//Contact page
-//alert
